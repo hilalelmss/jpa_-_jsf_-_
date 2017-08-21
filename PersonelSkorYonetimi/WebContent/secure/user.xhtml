@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title></title>
+</h:head>
+<h:body>
+	<h:form>
+		<p:panelGrid columns="2">
+			<p:menu toggleable="true">
+	   <p:submenu label="Skor Yönetimi">
+	       <p:menuitem value="Skor Görüntüle" url ="skorview.xhtml"  icon="ui-icon-disk" />
+	       <p:menuitem value="Skor Ekle" url="skoradd.xhtml" icon="ui-icon-arrowrefresh-1-w"/>
+	   </p:submenu>
+	   
+   	   <p:submenu label="Personel Yönetimi">
+	       <p:menuitem value="Personel Görütüle" url ="userview.xhtml"  icon="ui-icon-disk" />
+	       <p:menuitem value="Personel Ekle" url ="useradd.xhtml" icon="ui-icon-arrowrefresh-1-w"/>
+	   </p:submenu>
+	</p:menu>
+		<p:dataTable var="haber" value="#{userController.haberler}">
+			<p:column headerText="Sıra" >
+			<h:outputText value="#{haber.sira}" />
+			</p:column>
+			<p:column headerText="Duyuru" >
+			<h:outputText value="#{haber.duyuru}" />
+</p:column>
+		</p:dataTable>	
+	</p:panelGrid>
+	</h:form>
+</h:body>
+</html>

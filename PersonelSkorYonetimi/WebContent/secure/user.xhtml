@@ -12,25 +12,31 @@
 	<h:form>
 		<p:panelGrid columns="2">
 			<p:menu toggleable="true">
-	   <p:submenu label="Skor Yönetimi">
-	       <p:menuitem value="Skor Görüntüle" url ="skorview.xhtml"  icon="ui-icon-disk" />
-	       <p:menuitem value="Skor Ekle" url="skoradd.xhtml" icon="ui-icon-arrowrefresh-1-w"/>
-	   </p:submenu>
-	   
-   	   <p:submenu label="Personel Yönetimi">
-	       <p:menuitem value="Personel Görütüle" url ="userview.xhtml"  icon="ui-icon-disk" />
-	       <p:menuitem value="Personel Ekle" url ="useradd.xhtml" icon="ui-icon-arrowrefresh-1-w"/>
-	   </p:submenu>
-	</p:menu>
-		<p:dataTable var="haber" value="#{userController.haberler}">
-			<p:column headerText="Sıra" >
-			<h:outputText value="#{haber.sira}" />
-			</p:column>
-			<p:column headerText="Duyuru" >
-			<h:outputText value="#{haber.duyuru}" />
-</p:column>
-		</p:dataTable>	
-	</p:panelGrid>
+				<p:submenu label="Haberler">
+					<p:menuitem value="Haber Görüntüle" url="haberview.xhtml"
+						icon="ui-icon-disk" />
+					<p:menuitem value="Haber Ekle" url="haberadd.xhtml"
+						icon="ui-icon-arrowrefresh-1-w" />
+				</p:submenu>
+
+				<p:submenu label="Personel Yönetimi">
+					<p:menuitem value="Personel Görüntüle" url="userview.xhtml"
+						icon="ui-icon-disk" />
+					<p:menuitem value="Personel Ekle" url="useradd.xhtml"
+						icon="ui-icon-arrowrefresh-1-w" />
+				</p:submenu>
+			</p:menu>
+			
+			
+			<p:dataTable var="haber" value="#{userController.haberler}">
+				<p:column headerText="Sıra">
+					<h:outputText value="#{haber.sira}" />
+				</p:column>
+				<p:column headerText="Yanardag Patlamaları">
+					<h:outputText value="#{haber.yanardagPatlamalari}" />
+				</p:column>
+			</p:dataTable>
+		</p:panelGrid>
 	</h:form>
 </h:body>
 </html>

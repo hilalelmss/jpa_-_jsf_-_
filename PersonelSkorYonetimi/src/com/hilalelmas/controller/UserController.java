@@ -19,30 +19,31 @@ public class UserController {
 		haberler = new ArrayList<>();
 		Haber haber1 = new Haber();
 		haber1.setSira(1);
-		haber1.setDuyuru("escape()=>Bir karakter dizisini unicode formatýnda þifreler. "
-				+ "Genellikle URL satýrlarýnýn kullanýmýnda sorun çýkaran ($, #, &, boþluk) karakterlerini düzeltmek amacýyla kullanýlýr.");
+		haber1.setYanardagPatlamalari("Tambora Daðý:: "
+				+ "Tambora’da yaþanan patlamada 92.000 kiþi hayatýný kaybetmiþtir. Patlamanýn etkileri kilometrelerce uzaklarda bile hissedilmiþtir."
+				+ "Patlama sebebiyle 1816 yýlý “yazsýz yýl” ilan edilmiþtir. ");
 
 		Haber haber2 = new Haber();
 		haber2.setSira(2);
-		haber2.setDuyuru("isNaN()=>Deðiþken veya deðerin rakam olup olmadýðýný kontrol eder. "
-				+ "rakam ise false deðilse true deðeri döner.");
+		haber2.setYanardagPatlamalari("Pelee Daðý:: "
+				+ "25 Nisan 1902 yýlýnda baþlayan patlamalar 8 Mayýs’a kadar devam etti. Tamamýyla yerle bir olan St. Pierre kentinde son patlamada 25.000 kiþi hayatýný kaybetti."
+				+ "Sað kalmayý baþaran 2 kiþiden biri hücrede tutulan bir mahkum ve diðeri de þehrin dýþarýsýnda yaþayan bir adam oldu.");
 
 		Haber haber3 = new Haber();
 		haber3.setSira(3);
-		haber3.setDuyuru(
-				"eval()=>Girilen parametreyi tüm sayfada arar, bulduðunda JavaScript kodlarýna çevirir ve çalýþtýrýr. "
-						+ "Parametre eðer bir operatör ise operatör iþlemi yapar.");
+		haber3.setYanardagPatlamalari("Krakatoa Daðý:: "
+				+ "1883 yýlýnda patlayan Krakatoa Daðý, adanýn 2/3’ünü yerle bir etti. Patlamanýn sesi o kadar þiddetliydi ki Avustralya’dan bile duyulduðu kayýtlara geçti."
+				+ "Patlama sebebiyle hiç kimse hayatýný kaybetmedi. Tüm ölümlerin sebebi patlamaya baðlý ortaya çýkan tsunamiydi.");
 
 		Haber haber4 = new Haber();
 		haber4.setSira(4);
-		haber4.setDuyuru(
-				"isFinite()=>Girilen deðerin pozitif veya negatif sýnýrý aþýp aþmadýðýný kontrol eder. Sýnýr 1.79e+308 dir. "
-						+ "Bu pozitif sýnýr aþýlmýþsa true deðerini gönderir.");
+		haber4.setYanardagPatlamalari("Nevado del Ruiz:: "
+				+ "Patlama küçük olsa da yanardaðýn tepesindeki buz kütlesini eriterek devasa bir çamur kaymasýna sebep oldu. Çamur altýnda kalan Armero þehrinde 23.000 kiþi hayatýný kaybetti.");
 		haberler.add(haber1);
 		haberler.add(haber2);
 		haberler.add(haber3);
 		haberler.add(haber4);
-		
+
 	}
 
 	public void setHaberler(List<Haber> haberler) {

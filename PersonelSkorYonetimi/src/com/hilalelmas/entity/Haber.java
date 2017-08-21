@@ -2,7 +2,7 @@ package com.hilalelmas.entity;
 
 public class Haber {
 	int sira;
-	String duyuru;
+	String yanardagPatlamalari;
 
 	public void setSira(int sira) {
 		this.sira = sira;
@@ -12,12 +12,10 @@ public class Haber {
 		return sira;
 	}
 
-	public void setDuyuru(String duyuru) {
-		this.duyuru = duyuru;
+	public void setYanardagPatlamalari(String yanardagPatlamalari) {
+		this.yanardagPatlamalari = yanardagPatlamalari;
 	}
-
-	public String getDuyuru() {
-		return duyuru;
+	public String getYanardagPatlamalari() {
+		return yanardagPatlamalari;
 	}
-
 }

@@ -17,7 +17,7 @@ public class Haber {
 	}
 
 	public String getDuyuru() {
-	return duyuru;
+		return duyuru;
 	}
 
 }

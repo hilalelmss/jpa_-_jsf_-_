@@ -1,5 +1,7 @@
 package com.hilalelmas.controller;
 
+import java.util.UUID;
+
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -16,11 +18,15 @@ public class PersonController {
 	public void init() {
 		personAdd = new Person();
 	}
+
 	public void save() {
-System.out.println(personAdd.getName());
-MyDatabase database=new MyDatabase();
-database.addPerson(personAdd);
+		System.out.println(personAdd.getName());
+		MyDatabase database = new MyDatabase();
+		personAdd.setId(UUID.randomUUID().toString());
+		database.addPerson(personAdd);
+	
 	}
+	
 
 	public void setPersonAdd(Person personAdd) {
 		this.personAdd = personAdd;

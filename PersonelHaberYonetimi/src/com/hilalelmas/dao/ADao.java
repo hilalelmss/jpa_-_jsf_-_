@@ -8,7 +8,7 @@ public class ADao {
 	protected EntityManager em;
 
 	public ADao() {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Skor");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Haber");
 		this.em = emf.createEntityManager();
 	}
 }

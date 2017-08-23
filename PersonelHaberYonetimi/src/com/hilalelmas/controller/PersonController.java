@@ -1,5 +1,6 @@
 package com.hilalelmas.controller;
 
+import java.util.List;
 import java.util.UUID;
 
 import javax.annotation.PostConstruct;
@@ -14,6 +15,8 @@ import com.hilalelmas.jdbc.MyDatabase;
 public class PersonController {
 	Person personAdd;
 
+	List<Person> personList;
+
 	@PostConstruct
 	public void init() {
 		personAdd = new Person();
@@ -24,9 +27,8 @@ public class PersonController {
 		MyDatabase database = new MyDatabase();
 		personAdd.setId(UUID.randomUUID().toString());
 		database.addPerson(personAdd);
-	
+
 	}
-	
 
 	public void setPersonAdd(Person personAdd) {
 		this.personAdd = personAdd;
@@ -34,5 +36,12 @@ public class PersonController {
 
 	public Person getPersonAdd() {
 		return personAdd;
+	}
+	public void setPersonList(List<Person> personList) {
+		this.personList = personList;
+	}
+	
+	public List<Person> getPersonList() {
+		return personList;
 	}
 }

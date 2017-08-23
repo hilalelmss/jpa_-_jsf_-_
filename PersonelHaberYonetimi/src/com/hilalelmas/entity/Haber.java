@@ -3,6 +3,7 @@ package com.hilalelmas.entity;
 public class Haber {
 	int sira;
 	int id;
+	int haber;
 	String yanardagPatlamalari;
 
 	public void setSira(int sira) {

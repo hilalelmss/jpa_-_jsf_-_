@@ -28,22 +28,26 @@
 	</p:menu>
 	
 	<p:dataTable id="tbl"  var ="per" value="#{personController.personList}">
+	
 		<p:column headerText="İsim" sortBy="#{per.name}">
 			<h:outputText value="#{per.name}"/>
 		</p:column>
+		
 		<p:column headerText="Kullanici İsmi" sortBy="#{per.userName}" >
 			<h:outputText value="#{per.userName}" />
 		</p:column>
-		<p:column headerText="Rol">
+		
+		<p:column headerText="Rol" sortBy="#{per.role}">
 			<h:outputText value="#{per.role}"/>
 		</p:column>
+		
 	</p:dataTable>
 	
 	 
-    <h3>Export Page Data Only</h3>
+    <h3> Kullanıcı Verilerini excel dosyası olarak indir </h3>
     <h:commandLink>
         <p:graphicImage width="100" height="100" url="/resource/login.png" />
-        <p:dataExporter type="xls" target="tbl" fileName="kul" pageOnly="true"/>
+        <p:dataExporter type="xls" target="tbl" fileName="kullanicilar" pageOnly="true"/>
     </h:commandLink>
 	
 </p:panelGrid>

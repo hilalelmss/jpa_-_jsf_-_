@@ -8,8 +8,9 @@ import javax.faces.bean.SessionScoped;
 public class LoginController {
 	String defaultSifre = "6878232";
 	String defaultUserName = "leprax";
-	String outputKulAdi = "Kullanici Adi:";
-	String outputSifre = "Þifre:";
+
+	//String outputKulAdi = "Kullanici Adi:";
+	// String outputSifre = "Þifre:";
 	String kullaniciAdi;
 	String sifre;
 
@@ -17,39 +18,33 @@ public class LoginController {
 		this.kullaniciAdi = kullaniciAdi;
 	}
 
-	public String getKullaniciAdi() {
-		return kullaniciAdi;
-	}
-
 	public void setSifre(String sifre) {
 		this.sifre = sifre;
+	}
+
+	public String getKullaniciAdi() {
+		return kullaniciAdi;
 	}
 
 	public String getSifre() {
 		return sifre;
 	}
 
-	public void setOutputKulAdi(String outputKulAdi) {
-		this.outputKulAdi = outputKulAdi;
-	}
-
-	public String getOutputKulAdi() {
-		return outputKulAdi;
-	}
-
-	public void setOutputSifre(String outputSifre) {
-		this.outputSifre = outputSifre;
-	}
-
-	public String getOutputSifre() {
-		return outputSifre;
-	}
+//	public void setOutputKulAdi(String outputKulAdi) {
+//		this.outputKulAdi = outputKulAdi;
+//	}
+//
+//	public String getOutputKulAdi() {
+//		return outputKulAdi;
+//	}
 
 	public String login() {
 		if (getKullaniciAdi().equals(defaultUserName) && getSifre().equals(defaultSifre)) {
 			return "secure/user.xhtml?faces-redirect=true";
 		}
+	
 		return "fail.xhtml?faces-redirect=true";
 	}
+	
 
 }

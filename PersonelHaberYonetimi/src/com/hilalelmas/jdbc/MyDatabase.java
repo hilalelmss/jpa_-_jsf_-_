@@ -26,7 +26,7 @@ public class MyDatabase {
 			if (con != null)
 				System.out.println("baglandi");
 
-			String SQL = "INSERT INTO PERSON" + " (id,name,username,password,role)" + " values(%s,'%s','%s','%s',"
+			String SQL = "INSERT INTO PERSON" + " (id,name,username,password,role)" + " values('%s','%s','%s','%s',"
 					+ " %s)";
 
 			SQL = String.format(SQL, person.getId(), person.getName(), person.getUserName(), person.getPassword(),

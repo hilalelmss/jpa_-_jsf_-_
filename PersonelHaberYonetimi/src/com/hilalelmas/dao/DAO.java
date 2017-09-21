@@ -6,8 +6,9 @@ import com.hilalelmas.entity.Assessment;
 import com.hilalelmas.entity.Person;
 
 public class DAO extends ADao {
+
 	public List<Person> getPersonList() {
-		return this.em.createQuery("SELECT c FROM person c").getResultList();
+		return this.em.createQuery("SELECT c FROM Person c").getResultList();
 	}
 
 	public void save(Assessment assAdd) {

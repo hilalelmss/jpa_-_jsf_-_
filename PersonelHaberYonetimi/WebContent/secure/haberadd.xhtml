@@ -15,11 +15,11 @@
 		<p:panelGrid columns="2">
 
 			<p:menu toggleable="true">
-	  <p:submenu label="Haberler">
+				<p:submenu label="Haberler">
 					<p:menuitem value="Haber Görüntüle" url="haberview.xhtml"
-					icon="ui-icon-disk" />
-				<p:menuitem value="Haber Ekle" url="haberadd.xhtml"
-					icon="ui-icon-arrowrefresh-1-w" />
+						icon="ui-icon-disk" />
+					<p:menuitem value="Haber Ekle" url="haberadd.xhtml"
+						icon="ui-icon-arrowrefresh-1-w" />
 				</p:submenu>
 
 				<p:submenu label="Personel Yönetimi">
@@ -33,6 +33,8 @@
 			<p:panel>
 				<p:messages autoUpdate="true" />
 				<h:panelGrid columns="3" cellpadding="5">
+
+
 					<p:outputLabel for="perName" value="Personel İsmi" />
 					<p:selectOneMenu id="perName"
 						value="#{assessmentController.secilenPersonelName}">
@@ -40,12 +42,14 @@
 					</p:selectOneMenu>
 					<p:message for="perName" />
 
+
 					<p:outputLabel value="Yorum:" />
 					<p:inputTextarea
 						value="#{assessmentController.assAdd.assessmentNote}" rows="5"
 						cols="30" counter="display" maxlength="30"
 						counterTemplate="{0} kaldı." autoResize="false" />
 					<h:outputText id="display" />
+
 
 					<h:outputText value="" />
 					<h:outputText value="" />

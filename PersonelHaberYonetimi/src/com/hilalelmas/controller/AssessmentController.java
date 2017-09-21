@@ -17,6 +17,7 @@ public class AssessmentController {
 	DAO dao;
 	List<Person> personList;
 	List<String> personName;
+	List<Assessment> assessmentList;
 	String secilenPersonelName;
 	Assessment assAdd;
 
@@ -26,6 +27,7 @@ public class AssessmentController {
 		dao = new DAO();
 		createPersonNameList();
 		assAdd = new Assessment();
+		assessmentList = dao.getAssment();
 
 	}
 
@@ -44,19 +46,23 @@ public class AssessmentController {
 
 		}
 	}
+
 	public Person findPersonNamePerson(String name) {
 		personList = dao.getPersonList();
 		for (int i = 0; i < personList.size(); i++) {
-		if(	personList.get(i).getName().equals(name))
-			return personList.get(i);
+			if (personList.get(i).getName().equals(name))
+				return personList.get(i);
 
 		}
 		return null;
 	}
-	public void save(){
+
+	public String save() {
 		assAdd.setPerson(findPersonNamePerson((secilenPersonelName)));
 		dao.save(assAdd);
-		
+		assessmentList = dao.getAssment();
+		return "haberview.xhtml?faces-redirect=true";
+
 	}
 
 	public void setPersonName(List<String> personName) {
@@ -81,5 +87,13 @@ public class AssessmentController {
 
 	public String getSecilenPersonelName() {
 		return secilenPersonelName;
+	}
+
+	public void setAssessmentList(List<Assessment> assessmentList) {
+		this.assessmentList = assessmentList;
+	}
+
+	public List<Assessment> getAssessmentList() {
+		return assessmentList;
 	}
 }
